@@ -1,4 +1,8 @@
-import Image from "next/image";
+export const metadata = {
+  title:'Page about us',
+  description:'Here you can read information about us',
+  keywords:''
+}
 
 export default function Home() {
   return (
