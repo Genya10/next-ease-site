@@ -1,4 +1,4 @@
-import Link from "next/link"
+import Posts from "./components/Posts"
 
 async function fetchData(){
   const response = await fetch('https://jsonplaceholder.typicode.com/posts')
@@ -11,14 +11,8 @@ export default async function Home() {
 
   return (
     <div>
-    <h1>Main page</h1>   
-    {result.map(post => (
-      <div key={post.id} className="post">
-        <h3>{post.title}</h3>
-        <p>{post.body}</p>
-        <Link href={`/post/${post.id}`}>Details</Link>
-      </div>
-    ))}
+      <h1>Main page</h1>   
+      <Posts result={result}/>
     </div>
   );
 }
